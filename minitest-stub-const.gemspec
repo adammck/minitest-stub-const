@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "minitest-stub-const"
-  s.version     = 0.2
+  s.version     = 0.3
 
   s.authors     = ["Adam Mckaig"]
   s.email       = ["adam.mckaig@gmail.com"]
