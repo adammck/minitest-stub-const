@@ -30,6 +30,24 @@ class Object
     end
   end
 
+  # Remove the constant +name+ for the duration of a block. This is
+  # useful when testing code that checks whether a constant is defined
+  # or not.
+  #
+  # Example:
+  #
+  #   Object.stub_remove_const(:File) do
+  #     "Look ma, no File!" unless defined(File)
+  #   end
+  #   # => "Look ma, no File!"
+  def stub_remove_const(name)
+    orig = const_get(name)
+    remove_const(name)
+    yield
+  ensure
+    const_set(name, orig)
+  end
+
   # Add a minimal implementation of ActiveSupport's silence_warnings if it
   # hasn't already been defined, to call a block with warnings disabled.
   unless respond_to?(:silence_warnings)
