@@ -3,5 +3,5 @@ gemspec
 
 group :test do
   gem "minitest"
-  gem "turn"
+  gem "rake"
 end
