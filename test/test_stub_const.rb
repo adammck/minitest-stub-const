@@ -1,4 +1,5 @@
 require File.expand_path('../../lib/minitest/stub_const', __FILE__)
+require 'minitest/autorun'
 require 'minitest/mock'
 
 module A
