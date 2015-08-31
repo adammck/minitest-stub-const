@@ -21,6 +21,7 @@ describe 'Object' do
       A.stub_const(:B, @mock) do
         assert_equal :new, A::B.what
       end
+      @mock.verify
     end
 
     it 'restores the original value after the block' do
@@ -38,6 +39,7 @@ describe 'Object' do
         assert_equal :new, A::X.what
       end
       refute defined?(A::X)
+      @mock.verify
     end
   end
 
