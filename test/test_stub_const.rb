@@ -31,6 +31,14 @@ describe 'Object' do
     it 'does not raise any warnings' do
       assert_silent { A.stub_const(:B, @mock) { } }
     end
+
+    it 'should stub undefined constants' do
+      refute defined?(A::X)
+      A.stub_const(:X, @mock) do
+        assert_equal :new, A::X.what
+      end
+      refute defined?(A::X)
+    end
   end
 
   describe '#stub_remove_const' do
@@ -47,6 +55,12 @@ describe 'Object' do
 
     it 'does not raise any warnings' do
       assert_silent { A.stub_remove_const(:B) { } }
+    end
+
+    it 'leaves undefined constants undefined' do
+      refute defined?(A::X)
+      A.stub_remove_const(:X) { }
+      refute defined?(A::X)
     end
   end
 end
