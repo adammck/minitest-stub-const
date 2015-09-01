@@ -1,1 +1,2 @@
+sudo: false
 script: rake test
