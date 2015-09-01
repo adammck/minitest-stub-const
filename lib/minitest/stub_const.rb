@@ -1,21 +1,21 @@
 class Object
-
-  #
-  # Replace the +value+ of constant +name+ for the duration of a +block+. This
-  # is useful when testing that the expected class methods are being called on
-  # a Module or Class instance.
+  # Replace the +value+ of constant +name+ for the duration of a
+  # +block+. This is especially useful when testing that the expected
+  # class methods are being called on a Module or Class instance.
   #
   # Example:
   #
-  #   m = MiniTest::Mock.new
-  #   m.expect(:register, nil, [:whatever])
-  #
-  #   MyLib.stub_const(:Thing, m) do
-  #     @subject.add_thing(:whatever)
+  #   module Foo
+  #     BAR = :original
   #   end
-  #
-  #   m.verify
-  #
+  #   
+  #   Foo.stub_const(:BAR, :stubbed) do
+  #     Foo::BAR
+  #   end
+  #   # => :stubbed
+  #   
+  #   Foo::BAR
+  #   # => :original
   def stub_const(name, val, &block)
     defined = const_defined?(name)
     orig = const_get(name) if defined
