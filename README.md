@@ -1,6 +1,7 @@
 # minitest-stub-const
 
 [![Build Status](https://travis-ci.org/adammck/minitest-stub-const.svg)](https://travis-ci.org/adammck/minitest-stub-const)
+[![Gem](https://img.shields.io/gem/v/minitest-stub-const.svg)](https://rubygems.org/gems/minitest-stub-const)
 
 Stub constants for the duration of a block in MiniTest.  
 Similar to RSpec's [stub_const] [rspec].
