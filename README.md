@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/adammck/minitest-stub-const.svg)](https://travis-ci.org/adammck/minitest-stub-const)
 
 Stub constants for the duration of a block in MiniTest.  
-Like RSpec's [stub_const] [rspec], but boring and non-magical.
+Similar to RSpec's [stub_const] [rspec].
 
 
 ## Example
@@ -51,6 +51,7 @@ describe ThingAdder do
       SomeLib.stub_const(:Thing, mock) do
         adder.add_thing
       end
+
       assert mock.verify
     end
   end
