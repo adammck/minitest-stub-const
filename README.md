@@ -65,6 +65,10 @@ end
 gem install minitest-stub-const # duh
 ```
 
+Or add `gem "minitest-stub-const"` to your Gemfile and run `bundle install`.
+
+Then `require "minitest/stub_const"` on your `test_helper.rb` or test file.
+
 
 ## License
 
