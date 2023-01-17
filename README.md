@@ -4,7 +4,7 @@
 [![Gem](https://img.shields.io/gem/v/minitest-stub-const.svg)](https://rubygems.org/gems/minitest-stub-const)
 
 Stub constants for the duration of a block in MiniTest.  
-Similar to RSpec's [stub_const] [rspec].
+Similar to RSpec's [stub_const][rspec].
 
 
 ## Example
@@ -62,7 +62,7 @@ end
 ## Installation
 
 ```sh
-gem install minitest-stub-const # duh
+gem install minitest-stub-const
 ```
 
 Or add `gem "minitest-stub-const"` to your Gemfile and run `bundle install`.
@@ -72,12 +72,12 @@ Then `require "minitest/stub_const"` on your `test_helper.rb` or test file.
 
 ## License
 
-[minitest-stub-const] [repo] is free software, available under [the MIT license]
-[license].
+[minitest-stub-const][repo] is free software, available under the
+[MIT license][license].
 
 
 
 
-[repo]: https://raw.github.com/adammck/minitest-stub-const
+[repo]: https://github.com/adammck/minitest-stub-const
 [license]: https://raw.github.com/adammck/minitest-stub-const/master/LICENSE
 [rspec]: https://www.relishapp.com/rspec/rspec-mocks/v/2-12/docs/mutating-constants
