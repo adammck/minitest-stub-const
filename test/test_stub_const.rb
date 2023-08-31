@@ -19,7 +19,7 @@ end
 describe 'Object' do
   describe '#stub_const' do
     before do
-      @mock = MiniTest::Mock.new
+      @mock = Minitest::Mock.new
       @mock.expect(:what, :new)
     end
 
@@ -74,13 +74,13 @@ describe 'Object' do
 
   describe '#stub_consts' do
     before do
-      @mock = MiniTest::Mock.new
+      @mock = Minitest::Mock.new
       @mock.expect(:what, :new)
 
-      @mock2 = MiniTest::Mock.new
+      @mock2 = Minitest::Mock.new
       @mock2.expect(:who, :me)
 
-      @mock3 = MiniTest::Mock.new
+      @mock3 = Minitest::Mock.new
       @mock3.expect(:where, :there)
     end
 
